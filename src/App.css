@@ -1,38 +1,145 @@
+body {
+  background-color: #664f9d;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+
+main {
+  max-height: calc(100vh - 200px); 
+  overflow-y: auto; 
+}
+
 .App {
   text-align: center;
+  max-width: 728px;
+  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App header {
+  background: linear-gradient(to right, #812cf0, #32036e);
+  height: 64px;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  max-width: 728px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  z-index: 99;
+  padding: 0 20px;
+  box-sizing: border-box;
+  perspective: 1000px; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  margin: 0;
+  font-size: 36px; 
+  text-transform: uppercase;
+  font-weight: bold;
+  transform: rotateY(-10deg); 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App section {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: flex-end;
+  min-height: calc(100vh - 64px);
+  background-color: #e2e1e1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+main::-webkit-scrollbar {
+  width: 8px;
+}
+
+main::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+main::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+form {
+  display: flex;
+  align-items: center; 
+}
+
+input {
+  flex-grow: 1;
+  height: 56px;
+  font-size: 18px;
+  padding: 16px 20px;
+  border: none;
+  outline: none;
+  border-radius: 28px;
+  background-color: #f5f5f5;
+  box-shadow: inset 0 0 0 1px #ccc;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 16px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 28px;
+  margin-left: 10px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 16px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 28px;
+  margin-left: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.message {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
+.message img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sent {
+  flex-direction: row-reverse;
+}
+
+.sent p {
   color: white;
+  background: #007bff;
+  border-radius: 20px 20px 0 20px;
+  padding: 12px 16px;
+  margin: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.received p {
+  background: #f0f0f0;
+  color: black;
+  border-radius: 20px 20px 20px 0;
+  padding: 12px 16px;
+  margin: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
