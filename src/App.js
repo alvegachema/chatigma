@@ -84,7 +84,7 @@ function ChatRoom({ nickname }) {
       </main>
 
       <form onSubmit={sendMessage}>
-        <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="Type your message" />
+        <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="Type:" />
         <button type="submit" disabled={!formValue}>Send</button>
       </form>
     </>
@@ -121,7 +121,7 @@ function ChatRoom({ nickname }) {
 //       </main>
 
 //       <form onSubmit={sendMessage}>
-//         <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="Type your message" />
+//         <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="Type" />
 //         <button type="submit" disabled={!formValue}>Send</button>
 //       </form>
 //     </>
