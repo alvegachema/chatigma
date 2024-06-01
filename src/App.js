@@ -8,13 +8,13 @@ import 'firebase/compat/analytics';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
 firebase.initializeApp({
-  apiKey: "AIzaSyAIpDKN3QTpvzUjAQF2KnzuJXrSpyoNU7o",
+  apiKey: "",
   authDomain: "chatigma.firebaseapp.com",
   projectId: "chatigma",
-  storageBucket: "chatigma.appspot.com",
-  messagingSenderId: "203138923025",
-  appId: "1:203138923025:web:0f439280e10e76e081cfb0",
-  measurementId: "G-23SN5DB6RT"
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: "",
+  measurementId: ""
 });
 
 const firestore = firebase.firestore();
